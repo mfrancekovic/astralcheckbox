@@ -1,0 +1,144 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	text-align: center;
+	font-family: 'Arial', sans-serif;
+}
+
+h2 { 
+	font-size: 20px;
+	line-height: 36px;
+}
+
+h3 {
+	margin: 10px 0;
+}
+
+h4 {
+	font-size: 16px;
+	color: #222;
+	margin: 10px 0;
+}
+
+ol {
+	font-size: 13px;
+	color: #222;
+	padding: 0 20px;
+	line-height: 20px;
+}
+
+p {
+	font-size: 13px;
+	line-height: 20px;
+	color: #222;
+	margin: 5px 0;
+}
+
+pre {
+	padding: 10px;
+	background-color: #eeeeee;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#header {
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#content {
+	padding: 20px 0;
+}
+
+#footer {
+	border-top: 1px solid #ccc;
+	padding: 20px 0;
+	font-size: 13px;
+}
+
+#footer a {
+	color: #99cc33;
+	text-decoration: none;
+}
+
+/*Example 1*/
+
+.astral-checkbox-wrapper {
+	display: inline-block; height: 10px; width: 10px;
+	padding: 2px; border: 1px solid #ccc;
+}
+
+.astral-checkbox-anchor {
+	display: block;
+	height: 10px; width: 10px;
+	outline: none;
+}
+
+.astral-checkbox-anchor.checked {
+	background-color: blue;
+}
+
+/*Example 2*/
+.astral-checkbox-wrapper-example2 {
+	display: inline-block; height: 10px; width: 10px;
+	padding: 2px; border: 1px solid #ccc;
+	border-radius: 10px;
+} 
+
+.astral-checkbox-anchor-example2 {
+	display: block;
+	height: 10px; width: 10px;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	outline: none;
+}
+
+.astral-checkbox-anchor-example2.checked {
+	background-color: red;
+}
+
+/*Example 3*/
+.astral-checkbox-wrapper-example3 {
+	display: inline-block; height: 20px; width: 20px;
+	padding: 2px; border: 1px solid #ccc;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+} 
+
+.astral-checkbox-anchor-example3 {
+	display: block;
+	height: 20px; width: 20px;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	outline: none;
+}
+
+.astral-checkbox-anchor-example3:hover {
+	background-color: #ddd;
+}
+
+.astral-checkbox-anchor-example3.checked {
+	background-color: green;
+}
+
+/*Example 4*/
+.astral-checkbox-wrapper-example4 {
+	display: inline-block; height: 48px; width: 48px;
+} 
+
+.astral-checkbox-anchor-example4 {
+	display: block;
+	height: 48px; width: 48px;
+	overflow: hidden;
+	background: url('checkbox_icons.jpg') 0 0 no-repeat;
+	outline: none;
+}
+
+
+.astral-checkbox-anchor-example4.checked {
+	background-position: right 0;
+}

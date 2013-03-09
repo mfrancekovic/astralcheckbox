@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>astralCheckbox demo page</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Marko Francekovic">
+		<link href="astralcheckbox.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1>astralCheckbox demo page</h1>
+				<h2>A really simple jQuery plugin that allows you to style a checkbox.</h2>
+			</div>
+			<div id="content">
+				<h3>How to use</h3>
+				<p>first include jQuery</p>
+				<pre><code>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
+				<p>than include astralCheckbox plugin</p>
+				<pre><code>&lt;script type="text/javascript" src="jquery.astralcheckbox.js"&gt;&lt;/script&gt;</code></pre>
+				<p>and call the astralCheckbox on a checkbox you wish to style</p>
+				<pre><code>$(document).ready(function() {
+	$('#some-checkbox').astralCheckbox();
+});</code></pre>
+				
+				<h3>The Logic</h3>
+				<ol>
+					<li>First it hides the original checkbox.</li>
+					<li>Than it creates a replacement markup for you to style and adds it before the original checkbox in the DOM tree.</li>
+					<li>Markup consists of a wrapper div and an anchor inside.</li>
+					<li>Anchor listens to click event and checks/unchecks the original checkbox accordingly.</li>
+					<li>Anchor toggles active class to change the style state.</li>
+				</ol>
+				
+				<h3>The defaults</h3>
+				<p>There are only 3 options in astralCheckbox</p>
+				<pre><code>
+wrapperClass: "astral-checkbox-wrapper",
+anchorClass: "astral-checkbox-anchor",
+triggerEventName: "astral-checkbox-change"
+				</code></pre>
+				<p>wrapperClass: defines the css class for div wrapper</p>
+				<p>anchorClass: defines the css class for the anchor</p>
+				<p>triggerEventName: defines the name of the callback event on each checkbox state change</p>
+				<h3>The styling</h3>
+				<p>Styling is pretty simple. Here are few examples I made for you to get the idea what you can do.</p>
+				<h4>Example #1: no images</h4>
+				<input name="check" id="example-1" type="checkbox">
+				<h4>Example #2: no images, round, prechecked*</h4>
+				<input name="check" id="example-2" type="checkbox" checked>
+				<p>*to precheck a checkbox just add a checked property</p>
+				<h4>Example #3: no images, large, semi-round, with hover</h4>
+				<input name="check" id="example-3" type="checkbox">
+				<h4>Example #4: uses image sprite for the states</h4>
+				<input name="check" id="example-4" type="checkbox">
+			</div>
+			<div id="footer">
+				by: <a href="http://twitter.com/m_francekovic">@m_francekovic</a>
+			</div>
+		</div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.astralcheckbox.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//example-1 default options
+				$('#example-1').astralCheckbox();
+				
+				//example-2 different wrapper and anchor class
+				$('#example-2').astralCheckbox({
+					wrapperClass: "astral-checkbox-wrapper-example2",
+					anchorClass: "astral-checkbox-anchor-example2"
+				});
+				
+				//example-3 different wrapper and anchor class, changed listener name
+				$('#example-3').astralCheckbox({
+					wrapperClass: "astral-checkbox-wrapper-example3",
+					anchorClass: "astral-checkbox-anchor-example3",
+					triggerEventName: "example-3-callback"
+				});
+				
+				$('#example-3').on('example-3-callback', function() {
+					alert('The change of the checked state creates a callback for you to use.');
+				});
+				
+				//example-3 different wrapper and anchor class
+				$('#example-4').astralCheckbox({
+					wrapperClass: "astral-checkbox-wrapper-example4",
+					anchorClass: "astral-checkbox-anchor-example4"
+				});
+
+			});
+		</script>
+	</body>
+</html>
